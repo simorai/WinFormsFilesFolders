@@ -264,6 +264,7 @@
             // 
             // listBox1
             // 
+            listBox1.BackColor = Color.White;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
             listBox1.Location = new Point(650, 374);

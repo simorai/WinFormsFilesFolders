@@ -10,7 +10,7 @@ namespace WinFormsFilesFolders
     internal class FileHandling
     {
         //Aceder a pastas       
-        //Exemplo
+        //Pasta de exemplo
         // C:\Projetos\ExerciciosFiles\ExerciciosFiles\TestFiles
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace WinFormsFilesFolders
         {
             try
             {
-                // Obtém um array com todos os arquivos na pasta especificada
+                // Obtem um array com todos os arquivos na pasta especificada
                 string[] ficheiros = Directory.GetFiles(pasta);
                 listBox.Items.Clear();
                 foreach (string ficheiro in ficheiros)
@@ -73,7 +73,7 @@ namespace WinFormsFilesFolders
         {
             try
             {
-                // Cria um objeto DirectoryInfo para a pasta especificada e obtém todos os arquivos
+                // Cria um objeto DirectoryInfo para a pasta especificada e obtem todos os arquivos
                 var ficheiros = new DirectoryInfo(pasta).GetFiles();
                 listBox.Items.Clear();
                 foreach (var ficheiro in ficheiros)
@@ -179,7 +179,7 @@ namespace WinFormsFilesFolders
         {
             try
             {
-                // Obtém todos os arquivos com a extensão especificada na pasta
+                // Obtem todos os arquivos com a extensão especificada na pasta
                 var ficheiros = new DirectoryInfo(pasta).GetFiles($"*{extensao}");
                 // Itera sobre cada arquivo encontrado
                 foreach (var ficheiro in ficheiros)
@@ -203,7 +203,7 @@ namespace WinFormsFilesFolders
         {
             try
             {
-                // Obtém todos os arquivos cujo nome contém o padrão especificado na pasta
+                // Obtem todos os arquivos cujo nome contém o padrão especificado na pasta
                 var ficheiros = new DirectoryInfo(pasta).GetFiles($"*{padrao}*");
                 foreach (var ficheiro in ficheiros)
                 {
@@ -217,6 +217,5 @@ namespace WinFormsFilesFolders
                 MessageBox.Show("Erro ao apagar ficheiros: " + ex.Message);
             }
         }
-
     }
 }
